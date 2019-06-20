@@ -1,0 +1,23 @@
+<h1>Prodotti</h1>
+
+<p-table [value]="ps.all() | async">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Nome</th>
+          <th>Descrizione</th>
+          <th>Prezzo unitario</th>
+          <th>Attivo</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-prod>
+      <tr>
+          <td>{{prod.nome}}</td>
+          <td>{{prod.descrizione}}</td>
+          <td>{{prod.prezzoUnitario}}</td>
+          <td>{{prod.attivo}}</td>
+      </tr>
+  </ng-template>
+</p-table>
+
+
+<router-outlet></router-outlet>
